@@ -1,0 +1,148 @@
+/* Register page specific styles */
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Form group animations */
+.form-group {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Password strength indicator */
+.password-strength {
+  height: 4px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.strength-weak {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+  width: 25%;
+}
+
+.strength-medium {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  width: 50%;
+}
+
+.strength-strong {
+  background: linear-gradient(90deg, #10b981, #34d399);
+  width: 75%;
+}
+
+.strength-very-strong {
+  background: linear-gradient(90deg, #597592, #b2c1d3);
+  width: 100%;
+}
+
+/* Checkbox animation */
+.checkbox-container {
+  position: relative;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+  animation: checkmark 0.3s ease-out;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Benefit card hover */
+.benefit-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #597592, transparent);
+  transition: left 0.5s ease;
+}
+
+.benefit-card:hover::before {
+  left: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(89, 117, 146, 0.4);
+}
+
+/* Progress indicator */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(89, 117, 146, 0.2);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #020408;
+  border: 2px solid rgba(89, 117, 146, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  border-color: #597592;
+  background: #597592;
+  color: white;
+}
+
+.step.completed {
+  border-color: #597592;
+  background: #597592;
+  color: white;
+}

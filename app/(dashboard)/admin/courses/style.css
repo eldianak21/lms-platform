@@ -1,0 +1,258 @@
+/* Admin courses page specific styles */
+
+/* Stats grid animation */
+.stats-grid-item {
+  animation: fadeInUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.stats-grid-item:nth-child(1) { animation-delay: 0.1s; }
+.stats-grid-item:nth-child(2) { animation-delay: 0.2s; }
+.stats-grid-item:nth-child(3) { animation-delay: 0.3s; }
+.stats-grid-item:nth-child(4) { animation-delay: 0.4s; }
+.stats-grid-item:nth-child(5) { animation-delay: 0.5s; }
+.stats-grid-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filter panel animation */
+.filter-panel {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Table row animation */
+.course-row {
+  animation: slideInRight 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.course-row:nth-child(1) { animation-delay: 0.1s; }
+.course-row:nth-child(2) { animation-delay: 0.2s; }
+.course-row:nth-child(3) { animation-delay: 0.3s; }
+.course-row:nth-child(4) { animation-delay: 0.4s; }
+.course-row:nth-child(5) { animation-delay: 0.5s; }
+.course-row:nth-child(6) { animation-delay: 0.6s; }
+.course-row:nth-child(7) { animation-delay: 0.7s; }
+.course-row:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Course image placeholder animation */
+.course-image {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Status badge animation */
+.status-badge {
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Action button hover effects */
+.course-action-btn {
+  transition: all 0.3s ease;
+}
+
+.course-action-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured badge animation */
+.featured-badge {
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Quick action card hover */
+.quick-action-card {
+  transition: all 0.3s ease;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(2, 4, 8, 0.3);
+}
+
+/* Pending item hover effect */
+.pending-item {
+  transition: all 0.2s ease;
+}
+
+.pending-item:hover {
+  transform: translateX(5px);
+  background: rgba(89, 117, 146, 0.1) !important;
+}
+
+/* Top performer animation */
+.top-performer {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Recent update timestamp animation */
+.update-timestamp {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Empty state animation */
+.empty-state {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Search input focus effect */
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(89, 117, 146, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Filter button animation */
+.filter-button {
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(89, 117, 146, 0.2);
+}
+
+/* Create course button hover */
+.create-course-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.create-course-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.create-course-btn:hover::before {
+  left: 100%;
+}
+
+/* Table header gradient */
+.table-header {
+  position: relative;
+}
+
+.table-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #597592, transparent);
+}
+
+/* Rating stars animation */
+.rating-star {
+  transition: all 0.3s ease;
+}
+
+.course-row:hover .rating-star {
+  transform: scale(1.2);
+}
+
+/* Student count animation */
+.student-count {
+  transition: all 0.3s ease;
+}
+
+.course-row:hover .student-count {
+  transform: translateX(3px);
+}

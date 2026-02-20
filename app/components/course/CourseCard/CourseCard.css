@@ -1,0 +1,99 @@
+/* Course card hover effects */
+.course-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #597592, transparent);
+  transition: left 0.5s ease;
+}
+
+.course-card:hover::before {
+  left: 100%;
+}
+
+/* Featured course special styling */
+.featured-course {
+  border: 2px solid transparent;
+  background: linear-gradient(#020408, #020408) padding-box,
+              linear-gradient(135deg, #597592, #b2c1d3) border-box;
+  position: relative;
+}
+
+.featured-course::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #597592, #b2c1d3);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featured-course:hover::after {
+  opacity: 0.2;
+}
+
+/* Image overlay animation */
+.course-image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-image-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(2, 4, 8, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.course-card:hover .course-image-overlay::after {
+  opacity: 1;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  width: 0;
+  animation: progressGrow 1s ease-out forwards;
+}
+
+@keyframes progressGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

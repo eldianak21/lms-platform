@@ -1,0 +1,239 @@
+/* Student certificates page specific styles */
+
+/* Certificate card hover effect */
+.certificate-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.certificate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(89, 117, 146, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.certificate-card:hover::before {
+  left: 100%;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(2, 4, 8, 0.3);
+}
+
+/* Award icon animation */
+.award-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Score and grade badges animation */
+.score-badge {
+  animation: popIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.score-badge:nth-child(1) { animation-delay: 0.1s; }
+.score-badge:nth-child(2) { animation-delay: 0.2s; }
+.score-badge:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Skills tag hover effect */
+.skill-tag {
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  background: rgba(89, 117, 146, 0.2) !important;
+  border-color: rgba(89, 117, 146, 0.4) !important;
+}
+
+/* Verification code animation */
+.verification-code {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  animation: typewriter 1s ease-out;
+}
+
+@keyframes typewriter {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Action button hover effects */
+.action-btn {
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(89, 117, 146, 0.2);
+}
+
+/* Stats card animation */
+.stats-card {
+  animation: slideUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.stats-card:nth-child(1) { animation-delay: 0.1s; }
+.stats-card:nth-child(2) { animation-delay: 0.2s; }
+.stats-card:nth-child(3) { animation-delay: 0.3s; }
+.stats-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filter button animation */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #597592, #b2c1d3);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.filter-btn:hover::after {
+  width: 80%;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* Empty state animation */
+.empty-state {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Verification section animation */
+.verification-section {
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Feature list item animation */
+.feature-item {
+  animation: slideInLeft 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.1s; }
+.feature-item:nth-child(2) { animation-delay: 0.2s; }
+.feature-item:nth-child(3) { animation-delay: 0.3s; }
+.feature-item:nth-child(4) { animation-delay: 0.4s; }
+.feature-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Certificate grid stagger animation */
+.certificate-grid-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.certificate-grid-item:nth-child(1) { animation-delay: 0.1s; }
+.certificate-grid-item:nth-child(2) { animation-delay: 0.2s; }
+.certificate-grid-item:nth-child(3) { animation-delay: 0.3s; }
+.certificate-grid-item:nth-child(4) { animation-delay: 0.4s; }
+.certificate-grid-item:nth-child(5) { animation-delay: 0.5s; }
+.certificate-grid-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Download counter animation */
+.download-counter {
+  font-variant-numeric: tabular-nums;
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover .download-counter {
+  transform: scale(1.1);
+}

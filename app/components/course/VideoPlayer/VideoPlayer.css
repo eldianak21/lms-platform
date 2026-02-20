@@ -1,0 +1,115 @@
+/* Custom range input styling */
+.custom-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.custom-range::-webkit-slider-track {
+  background: linear-gradient(90deg, #597592, #b2c1d3);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #597592;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.custom-range::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-range::-moz-range-track {
+  background: linear-gradient(90deg, #597592, #b2c1d3);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.custom-range::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #597592;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.custom-range::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Video overlay animations */
+.video-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-overlay {
+  opacity: 1;
+}
+
+/* Play button animation */
+.play-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(89, 117, 146, 0.4);
+}
+
+/* Settings menu animation */
+.settings-menu {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar glow effect */
+.progress-bar-glow {
+  position: relative;
+}
+
+.progress-bar-glow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #597592, #b2c1d3);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(4px);
+}
+
+/* Quality badge animation */
+.quality-badge {
+  transition: all 0.2s ease;
+}
+
+.quality-badge:hover {
+  background: rgba(89, 117, 146, 0.2) !important;
+}

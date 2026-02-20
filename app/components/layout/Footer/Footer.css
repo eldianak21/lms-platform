@@ -1,0 +1,37 @@
+.footer-link {
+  position: relative;
+  padding-left: 0;
+  transition: padding-left 0.3s ease;
+}
+
+.footer-link:hover {
+  padding-left: 8px;
+}
+
+.footer-link::before {
+  content: '→';
+  position: absolute;
+  left: -10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover::before {
+  left: 0;
+  opacity: 1;
+}
+
+/* Newsletter form focus effect */
+.newsletter-input:focus {
+  box-shadow: 0 0 0 2px rgba(178, 193, 211, 0.2);
+}
+
+/* Social icon hover effect */
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) rotate(5deg);
+  box-shadow: 0 5px 15px rgba(89, 117, 146, 0.3);
+}

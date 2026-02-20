@@ -1,0 +1,48 @@
+/* Feature card hover effect */
+.feature-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #597592, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon animation */
+.feature-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Comparison table row hover */
+.comparison-row {
+  transition: all 0.2s ease;
+}
+
+.comparison-row:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(89, 117, 146, 0.1);
+}
+
+/* Gradient border animation */
+.gradient-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(#020408, #020408) padding-box,
+              linear-gradient(135deg, #597592, #b2c1d3) border-box;
+}

@@ -1,0 +1,70 @@
+/* Form input focus effects */
+.form-input:focus {
+  box-shadow: 0 0 0 3px rgba(89, 117, 146, 0.1);
+  border-color: #597592;
+}
+
+/* Button glow effect */
+.cta-button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #597592, #b2c1d3, #597592);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button-glow:hover::before {
+  opacity: 1;
+}
+
+/* Company logo hover effect */
+.company-logo {
+  transition: all 0.3s ease;
+  opacity: 0.3;
+}
+
+.company-logo:hover {
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating-element {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+.animated-gradient {
+  background: linear-gradient(90deg, #597592, #b2c1d3, #ffffff, #b2c1d3, #597592);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShine 3s linear infinite;
+}
+
+@keyframes textShine {
+  to {
+    background-position: 200% center;
+  }
+}

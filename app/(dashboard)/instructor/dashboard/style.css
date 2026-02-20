@@ -1,0 +1,230 @@
+/* Instructor dashboard specific styles */
+
+/* Stats counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-number {
+  animation: countUp 0.5s ease-out forwards;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  width: 0;
+  animation: progressFill 1.5s ease-out forwards;
+}
+
+@keyframes progressFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+/* Course performance card hover */
+.course-performance-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.course-performance-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(89, 117, 146, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.course-performance-card:hover::before {
+  left: 100%;
+}
+
+.course-performance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(2, 4, 8, 0.2);
+}
+
+/* Review card animation */
+.review-card {
+  animation: slideInRight 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+.review-card:nth-child(1) { animation-delay: 0.1s; }
+.review-card:nth-child(2) { animation-delay: 0.2s; }
+.review-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enrollment item hover effect */
+.enrollment-item {
+  transition: all 0.2s ease;
+}
+
+.enrollment-item:hover {
+  transform: translateX(5px);
+  background: rgba(89, 117, 146, 0.1) !important;
+}
+
+/* Task item animation */
+.task-item {
+  animation: fadeInUp 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.task-item:nth-child(1) { animation-delay: 0.1s; }
+.task-item:nth-child(2) { animation-delay: 0.2s; }
+.task-item:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quick stats animation */
+.quick-stat {
+  animation: slideInLeft 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+.quick-stat:nth-child(1) { animation-delay: 0.1s; }
+.quick-stat:nth-child(2) { animation-delay: 0.2s; }
+.quick-stat:nth-child(3) { animation-delay: 0.3s; }
+.quick-stat:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Revenue chart animation */
+.revenue-chart-bar {
+  width: 0;
+  animation: growWidth 1s ease-out forwards;
+}
+
+@keyframes growWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--chart-width);
+  }
+}
+
+/* Performance metric cards */
+.metric-card {
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(2, 4, 8, 0.3);
+}
+
+/* Welcome header gradient animation */
+.welcome-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(178, 193, 211, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button hover effects */
+.instructor-btn {
+  transition: all 0.3s ease;
+}
+
+.instructor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(89, 117, 146, 0.2);
+}
+
+/* Rating stars animation */
+.rating-star {
+  transition: all 0.3s ease;
+}
+
+.rating-star:hover {
+  transform: scale(1.2);
+}
+
+/* Student avatar animation */
+.student-avatar {
+  transition: all 0.3s ease;
+}
+
+.enrollment-item:hover .student-avatar {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Task icon animation */
+.task-icon {
+  transition: all 0.3s ease;
+}
+
+.task-item:hover .task-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Metric icon animation */
+.metric-icon {
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover .metric-icon {
+  transform: translateY(-5px);
+}

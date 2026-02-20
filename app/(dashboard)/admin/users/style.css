@@ -1,0 +1,233 @@
+/* Admin users page specific styles */
+
+/* Stats card animation */
+.stats-card {
+  animation: slideUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.stats-card:nth-child(1) { animation-delay: 0.1s; }
+.stats-card:nth-child(2) { animation-delay: 0.2s; }
+.stats-card:nth-child(3) { animation-delay: 0.3s; }
+.stats-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filter button animation */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #597592, #b2c1d3);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.filter-btn:hover::after {
+  width: 80%;
+}
+
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* Bulk action button hover */
+.bulk-action-btn {
+  transition: all 0.3s ease;
+}
+
+.bulk-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(89, 117, 146, 0.2);
+}
+
+/* Table row animation */
+.table-row {
+  animation: fadeIn 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.table-row:nth-child(1) { animation-delay: 0.1s; }
+.table-row:nth-child(2) { animation-delay: 0.2s; }
+.table-row:nth-child(3) { animation-delay: 0.3s; }
+.table-row:nth-child(4) { animation-delay: 0.4s; }
+.table-row:nth-child(5) { animation-delay: 0.5s; }
+.table-row:nth-child(6) { animation-delay: 0.6s; }
+.table-row:nth-child(7) { animation-delay: 0.7s; }
+.table-row:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User avatar hover effect */
+.user-avatar {
+  transition: all 0.3s ease;
+}
+
+.table-row:hover .user-avatar {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Role badge animation */
+.role-badge {
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Status badge animation */
+.status-badge {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Action button hover effects */
+.action-btn {
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+  background: rgba(89, 117, 146, 0.2) !important;
+}
+
+/* Empty state animation */
+.empty-state {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* User growth metric animation */
+.metric-card {
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(2, 4, 8, 0.3);
+}
+
+/* Progress bar animation */
+.metric-progress {
+  width: 0;
+  animation: growWidth 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes growWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--metric-value);
+  }
+}
+
+/* Search input focus effect */
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(89, 117, 146, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Add user button hover */
+.add-user-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.add-user-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.add-user-btn:hover::before {
+  left: 100%;
+}
+
+/* Checkbox hover effect */
+.custom-checkbox {
+  transition: all 0.3s ease;
+}
+
+.custom-checkbox:hover {
+  border-color: rgba(89, 117, 146, 0.6) !important;
+}
+
+/* Table header gradient */
+.table-header {
+  position: relative;
+}
+
+.table-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #597592, transparent);
+}
